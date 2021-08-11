@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.static(__dirname + "/public"))
 
 app.get("/images", async (req, res) => {
-    const filenames = await images()
+    const filenames = (await images()).map(filename => `/images/${filename}`)
     res.json(filenames)
 })
 
