@@ -14,8 +14,8 @@
             width: 100%;
             padding: 0;
             margin: 0;
+            overflow: hidden;
             box-sizing: border-box;
-            /* overflow: hidden; */
         }
 
         *, ::before, ::after {
@@ -53,7 +53,7 @@
             border-radius: 999px;
         }
 
-        .masonry {
+        .image__container {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -61,11 +61,12 @@
             height: 100vh;
         }
 
-        .masonry img {
+        .image__container img {
             max-height: calc(100% - 4rem);
             max-width: 100%;
+            object-fit: cover;
         }
-        
+
         .hidden {
             display: none;
         }
@@ -80,6 +81,6 @@
         </div>
     </div>
 
-    <div class="masonry"></div>
+    <div class="image__container"></div>
 </body>
 </html>
